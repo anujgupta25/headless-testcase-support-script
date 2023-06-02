@@ -3,4 +3,4 @@ AWS_PULL_REQUEST_ID=$1
 echo "AWS PULL REQUEST ID: ${AWS_PULL_REQUEST_ID}"
 
 # execute node file
-node utils.js --AWS_PR_ID=$AWS_PULL_REQUEST_ID
+node utils.js --AWS_PR_ID=$AWS_PULL_REQUEST_ID 
