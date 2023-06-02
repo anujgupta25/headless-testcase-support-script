@@ -16,9 +16,10 @@ function getArg(key) {
 
 function postcomment(body) {
   const token = process.env.GITHUB_TOKEN;
+  const url = getArg("AWS_CLONE_URL").split(".git")[0].split("/");
   axios
     .post(
-      `https://api.github.com/repos/anujgupta2559/amplify-react-app/pulls/${getArg(
+      `https://api.github.com/repos/anujgupta2559/${url[url.length-1]}/pulls/${getArg(
         "AWS_PR_ID"
       )}/reviews`,
       {
@@ -35,7 +36,7 @@ function postcomment(body) {
         },
       }
     )
-    .then((res) => console.log("success..."))
+    .then((res) => console.log("success...", res.data))
     .catch((er) => console.log("ERROR....", er.message));
 }
 
