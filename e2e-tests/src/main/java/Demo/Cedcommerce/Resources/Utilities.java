@@ -92,8 +92,6 @@ public class Utilities {
 				options.addArguments("--headless");
 				options.addArguments("--disable-dev-shm-usage");
 				options.addArguments("--remote-allow-origins=*");
-				options.addArguments("--disable-gpu");
-				options.addArguments("--disable-extensions");
 				driver.set(new ChromeDriver(options));
 			} else if (browserName.equalsIgnoreCase("safari")) {
 				WebDriverManager.safaridriver().setup();
