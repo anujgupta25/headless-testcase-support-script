@@ -49,7 +49,7 @@ let body = "";
 
 str.on("end", () => {
   const removeLineBreak = body.replace(/[\r\n]/gm, "");
-  const final = removeLineBreak.replace(/['"]+/g, "");
+  const final = removeLineBreak.replace(/['"]+/g, "").replace('<title></title>','');
   return postcomment(final);
 });
 
