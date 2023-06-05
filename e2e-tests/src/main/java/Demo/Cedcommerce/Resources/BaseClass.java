@@ -21,7 +21,7 @@ public class BaseClass {
 
 	@BeforeClass(alwaysRun = true)
 	public void LaunchingMethod() throws Exception {
-		util.openFirstPage(util, "firefox", null, util.getProperty("BaseUrl"));
+		util.openFirstPage(util, "chrome", null, util.getProperty("BaseUrl"));
 	}
 	
 	@AfterClass(alwaysRun = true)
