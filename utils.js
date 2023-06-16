@@ -37,7 +37,7 @@ function postcomment(body) {
       }
     )
     .then((res) => console.log("success...", res.data))
-    .catch((er) => console.log("ERROR....", er.message));
+    .catch((er) => console.log("ERROR....", er.message, "\n", er?.response?.data?.message));
 }
 
 const str = fs.createReadStream(
