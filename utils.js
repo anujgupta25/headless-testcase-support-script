@@ -15,7 +15,7 @@ function getArg(key) {
 }
 
 function postcomment(body) {
-  const token = process.env.GITHUB_TOKEN;
+  const token = getArg("GITHUB_TOKEN");
   const url = getArg("AWS_CLONE_URL").split(".git")[0].split("/");
   axios
     .post(
